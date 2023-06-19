@@ -14,7 +14,7 @@ breaker = CircuitBreaker(fail_max=failure_threshold,
 
 @breaker
 def call_endpoint():
-    response = requests.get('http://localhost:5000/failure')
+    response = requests.get('http://localhost:5000/random')
     response.raise_for_status()  # Lança uma exceção caso a resposta não seja bem-sucedida
     return response.json()
 
